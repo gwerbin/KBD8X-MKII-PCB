@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:Voyager87-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -371,7 +370,7 @@ Wire Wire Line
 Wire Wire Line
 	1650 5375 1650 5425
 $Comp
-L Connector:AVR-ISP-6 J1
+L KBD8X-MK2-rescue:AVR-ISP-6-Connector J1
 U 1 1 5B68D1BE
 P 4475 1725
 F 0 "J1" H 4195 1821 50  0000 R CNN
@@ -568,17 +567,6 @@ Wire Wire Line
 	1550 1800 1550 2475
 Wire Wire Line
 	1550 2475 1700 2475
-$Comp
-L Switch:SW_Push SW1
-U 1 1 5C4DB62B
-P 3450 3550
-F 0 "SW1" H 3450 3835 50  0000 C CNN
-F 1 "SW_Push" H 3450 3744 50  0000 C CNN
-F 2 "random-keyboard-parts:SKQG-1155865" H 3450 3750 50  0001 C CNN
-F 3 "" H 3450 3750 50  0001 C CNN
-	1    3450 3550
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3650 3550 3775 3550
 Connection ~ 3775 3550
@@ -619,7 +607,7 @@ $EndSheet
 Text GLabel 5400 3850 2    50   Input ~ 0
 RGBLED
 $Comp
-L MCU_Microchip_ATmega:ATmega32U4-MU U1
+L KBD8X-MK2-rescue:ATmega32U4-MU-MCU_Microchip_ATmega U1
 U 1 1 618B6D6D
 P 4800 5050
 F 0 "U1" H 4800 3164 50  0000 C CNN
@@ -737,4 +725,32 @@ Text GLabel 4875 1625 2    50   Input ~ 0
 SLOCK_IND
 Text GLabel 4875 1525 2    50   Input ~ 0
 RGBLED
+$Comp
+L Switch:SW_Push SW1
+U 1 1 5C4DB62B
+P 3450 3550
+F 0 "SW1" H 3450 3835 50  0000 C CNN
+F 1 "SW_Push" H 3450 3744 50  0000 C CNN
+F 2 "random-keyboard-parts:SKQG-1155865" H 3450 3750 50  0001 C CNN
+F 3 "" H 3450 3750 50  0001 C CNN
+	1    3450 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW4
+U 1 1 5E8C2545
+P 3450 3650
+F 0 "SW4" H 3450 3935 50  0000 C CNN
+F 1 "SW_Push" H 3450 3844 50  0000 C CNN
+F 2 "random-keyboard-parts:SKQG-1155865" H 3450 3850 50  0001 C CNN
+F 3 "" H 3450 3850 50  0001 C CNN
+	1    3450 3650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3650 3550 3650 3650
+Connection ~ 3650 3550
+Wire Wire Line
+	3250 3550 3250 3650
+Connection ~ 3250 3550
 $EndSCHEMATC
